@@ -5,15 +5,17 @@ ALIVE = 1
 
 
 def random_state(width, height):
-    return [[random.randint(0, 1) for i in range(width)] for i in range(height)]
+    """Create a new random matrix"""
+    return [[random.randint(0, 1) for _ in range(width)] for _ in range(height)]
 
 
 def render(state):
+    """Show the board in a legible way"""
     height = len(state)
-    for i in range(height):
+    for y in range(height):
         print('|', end='')
-        for number in state[i]:
-            if number == ALIVE:
+        for x in state[y]:
+            if x == ALIVE:
                 print("#", end='')
             else:
                 print(' ', end='')
@@ -22,9 +24,9 @@ def render(state):
 
 def render_n(state):
     for row in state:
-        print(*row)
+        print(*row, sep='')
 
 
-# x = random_state(6, 4)
-# render(x)
-# render_n(x)
+# def new_cell_state(coords, state):
+#
+# def new_board_state(state):
