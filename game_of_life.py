@@ -97,5 +97,5 @@ def run(init_state):
 
 
 if __name__ == "__main__":
-    init_state = random_state(100, 50)
-    run(init_state)
+    start = random_state(100, 50)
+    run(start)
